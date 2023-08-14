@@ -1,0 +1,293 @@
+@import './ecomPSFLIB.scss';
+@import './ecomPSFmixins.scss'; 
+
+@font-face {
+    font-family: 'kblack';
+    src: url("./fonts/KumbhSans-Black.ttf");
+}
+
+@font-face {
+    font-family: 'kbold';
+    src: url("./fonts/KumbhSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'kregular';
+    src: url("./fonts/KumbhSans-Regular.ttf");
+}
+
+body {
+    width: $desktop_width;
+    background-color: $white;
+    box-sizing: border-box;
+    font-size: $fsize;
+    font-family: 'kblack';
+}
+
+.hoverable:hover {
+    cursor: pointer;
+}
+
+.fbold_small {
+    font-family: 'kregular';
+    font-weight: 800;
+    font-size: 15px;
+    color: $orange;
+    font-weight: bolder;
+}
+.fbold_small_black {
+    color: $blackish;
+}
+
+.fbold_large {
+    font-family: 'kbold';
+    font-size: 42px;
+    font-weight: bolder;
+}
+
+.reduce_opacity {
+    opacity: 40%;
+}
+
+.reduce_filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.884); /* Adjust the alpha (opacity) value */
+    filter: brightness(30%); /* Adjust the brightness value */
+    z-index: -1; /* Place the dimmed background behind other content */
+    pointer-events: none;
+}
+
+.display_none {
+    display: none;
+}
+
+.display_flex {
+    display: flex;
+}
+
+.display_block {
+    display: block;
+}
+
+div.abs {
+    background-color: rgba(121, 129, 130, 0.733);
+    position: absolute;
+    top: 40%;
+    border-radius: 80px;
+    img {
+        padding: 10px;
+    }
+    img:hover {
+        cursor: pointer;
+        background-color: rgba(101, 125, 129, 0.622);
+    }
+
+}
+div.abs_pos_right {
+    right: 0;
+}
+div.abs_pos_left {
+    left: 0;
+}
+
+.m10 {
+    margin: 10px;
+}
+.m20 {
+    margin: 20px;
+}
+.m30 {
+    margin: 30px;
+}
+
+.w60 {
+    width: 70%;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.p30 {
+    padding: 20px;
+}
+
+.b10 {
+    font-weight: $fsmall;
+}
+.b20 {
+    font-weight: $flarge;
+}
+
+.mphoto {
+    border-radius: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.271), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.orig_price {
+    text-decoration: line-through;
+    color: $dark_grayish_blue;
+    font-weight: $fsmall;
+}
+
+.spill {
+    padding: 4px;
+    background-color: $pale_orange;
+    color: $orange;
+    @include make_bradius($bradius);
+}
+
+.spill_carter {
+    background-color: $light_grayish_blue;
+}
+
+img {
+    @include make_bradius($bradius); 
+}
+
+div.main_div {
+    width: 100%;
+    margin: auto;
+}
+
+div.menu_line {
+    display: flex;
+    flex-direction: row;
+
+    div.menu_set1 {
+        @include flexer-row;
+        flex: 67%;
+        div.hoverable:hover {
+            text-decoration: underline;
+        }
+    }
+
+    div.menu_set2 {
+        @include flexer-end;
+        flex: 33%;
+        div {
+            margin: 15px;
+        }
+    }
+}
+
+div.second_div {
+    @include flexer-row;
+    > {
+        div {
+            flex: 50%;
+        }
+    }
+}
+
+div.second_set {
+    @include flexer-column;
+}
+
+div.second_set2 {
+    @include flexer-row; 
+    img {
+        display: inline-block;
+        margin: 10px;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+div.third_set {
+    font-family: 'kregular';
+    > {
+        div {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+div.carter {
+    @include flexer-row;
+    div.hoverable:hover {
+        background-color: hsl(26, 47%, 36%);
+    }
+}
+div.cartadd {
+    @include flexer-around;
+    background-color: $orange;
+    width: 40%;
+    margin: auto;
+    @include make_bradius($bradius);
+    margin-right: 140px;
+  
+    .cartbutton {
+        padding: -30px;
+        margin-right: 60px;
+        color: hsl(60, 51%, 69%);
+        font-weight: bolder;
+    }
+}
+
+div.cartwindow {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 990;
+    width: 20%;
+    font-size: 14px;
+    background-color: hsl(25, 100%, 94%);
+    @include make_bradius($bradius);
+    transition: display 1s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    > {
+        div {
+            margin: 10px;
+        }
+    }
+    .aprice {
+        font-weight: bolder;
+    }
+}
+
+div.cartgrid {
+    font-family: 'kregular';
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: left;
+    gap: 15px;
+    div.cartgrid_1 {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    div.cartgrid_2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    div.cartgrid_3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    div.cartgrid_3 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    div.cartgrid_5 {
+        grid-column: 3/4;
+        grid-row: 1/4;
+    }
+}
+
+div.modal_window {
+    z-index: 999;
+    position: fixed;
+    top: 20%;
+    right: 35%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.271), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hoverable:hover {
+    cursor: pointer;
+}
+
+

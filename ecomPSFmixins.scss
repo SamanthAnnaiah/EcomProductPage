@@ -1,0 +1,31 @@
+@mixin make_bradius($bradius) {
+    border-radius: $bradius;
+}
+
+@mixin flexer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexer-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flexer-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

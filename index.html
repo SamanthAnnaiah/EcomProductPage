@@ -1,15 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcomProduct</title>
-    <meta name="Author" content="SamanthAnnaiah">
-    <link rel="stylesheet" href="ecomPSF.css">
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <meta name="Author" content="SamanthAnnaiah" />
+    <link rel="stylesheet" href="ecomPSF.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <script defer type="module" src="ecomMain.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="menu_line">
+        <div class="menu_set1">
+          <div class="fbold_small">
+            <img src="images/logo.svg" alt="logo of website" />
+          </div>
+          <div class="hoverable">Collections</div>
+          <div class="hoverable">Men</div>
+          <div class="hoverable">Women</div>
+          <div class="hoverable">About</div>
+          <div class="hoverable">Contact</div>
+        </div>
+        <div class="menu_set2">
+          <div class="m20">
+            <img src="images/icon-cart.svg" id="shopCart" alt="cart icon" />
+          </div>
+          <div>
+            <img
+              src="images/mphoto.jpg"
+              alt="image avatar"
+              width="45px"
+              height="52px"
+              class="mphoto"
+            />
+          </div>
+        </div>
+      </div>
+      <hr class="reduce_opacity" />
+      <div class="second_div">
+        <div class="second_set">
+          <div class="second_set1">
+            <img
+            class="hoverable"
+              id="pimg"
+              src="imageS/image-product-1.jpg"
+              alt="image product 1"
+              width="375px"
+              height="375px"
+            />
+          </div>
+          <div class="second_set2">
+            <img
+            class="hoverable reduce_opacity"
+              src="images/image-product-1-thumbnail.jpg"
+              alt="thumbnail"
+              id="tn11"
+            />
+            <img
+            class="hoverable"
+              src="images/image-product-2-thumbnail.jpg"
+              alt="thumbnail"
+              id="tnl2"
+            />
+            <img
+            class="hoverable"
+              src="images/image-product-3-thumbnail.jpg"
+              alt="thumbnail"
+              id="tnl3"
+            />
+            <img
+            class="hoverable"
+              src="images/image-product-4-thumbnail.jpg"
+              alt="thumbnail"
+              id="tnl4"
+            />
+          </div>
+        </div>
+        <div class="third_set">
+            <div class="fbold_small">
+                SNEAKER COMPANY 
+            </div>
+            <div class="fbold_large" id="itemname">
+                Fall Limited Edition Sneakers
+            </div>
+            <div>
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, 
+                they'll withstand everything the weather can offer. 
+            </div>
+            <div>
+                <span class="b20" id="actual_cost">125.00 $</span><span class="m20 spill b10">50%</span>
+                <p class="orig_price" id="orig_cost">250 $</p>
+            </div>
+            <div class="carter">
+                <div class="spill spill_carter">
+                    <span type="button" class="m30 fbold_small hoverable" id="minusitems"><img src="images/icon-minus.svg" alt="addMinus" data-mp="minus"></span>
+                    <span class="fbold_small fbold_small_black" id="nitems">0</span>
+                    <span type="button" class="m30 fbold_small hoverable" id="plusitems"><img src="images/icon-plus.svg" alt="addPlus" data-mp="plus"></d>
+                </div>
+                <div class="cartadd p30 hoverable" id="scart">
+                    <img src="/images/icon-cart.svg" alt="cart icon" srcset="">
+                    <span class="cartbutton">Add to Cart</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cartwindow">
+      <div>Cart</div>
+      <hr class="w60">
+      <div class="cartgrid">
+        <div class="cartgrid_1">
+          <img src="images/image-product-1-thumbnail.jpg" alt="" width="80px" height="80px">
+        </div>
+        <div class="iname">
+          item name 
+        </div>
+        <div class="aprice">
+          <em>actual price</em>
+        </div>
+        <div class="savings">
+          savings  
+        </div>
+        <div class="cartgrid_5">
+          <img src="images/icon-delete.svg" alt="" width="30px" height="30px" class="cart_delete hoverable"> 
+        </div>
+      </div>
+      <div class="cartadd p10 hoverable" id="checkout">
+        CheckOut 
+      </div>
+    </div>
+
+    <div class="modal_window">
+      <div class="abs abs_pos_right">
+        <img src="images/icon-next.svg" alt="icon next" id="iconNext" height="20px" width="20px">
+      </div>
+      <div class="abs abs_pos_left">
+        <img src="images/icon-previous.svg" alt="icon prev" id="iconPrevious" height="20px" width="20px">
+      </div>
+    </div>
+
+  </body>
 </html>

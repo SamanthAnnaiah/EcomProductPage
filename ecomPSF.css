@@ -1,1 +1,303 @@
-/*# sourceMappingURL=ecomPSF.css.map */
+@font-face {
+  font-family: "kblack";
+  src: url("./fonts/KumbhSans-Black.ttf");
+}
+@font-face {
+  font-family: "kbold";
+  src: url("./fonts/KumbhSans-Bold.ttf");
+}
+@font-face {
+  font-family: "kregular";
+  src: url("./fonts/KumbhSans-Regular.ttf");
+}
+body {
+  width: 1440px;
+  background-color: hsl(0, 0%, 100%);
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "kblack";
+}
+
+.hoverable:hover {
+  cursor: pointer;
+}
+
+.fbold_small {
+  font-family: "kregular";
+  font-weight: 800;
+  font-size: 15px;
+  color: hsl(26, 100%, 55%);
+  font-weight: bolder;
+}
+
+.fbold_small_black {
+  color: hsl(0, 0%, 0%);
+}
+
+.fbold_large {
+  font-family: "kbold";
+  font-size: 42px;
+  font-weight: bolder;
+}
+
+.reduce_opacity {
+  opacity: 40%;
+}
+
+.reduce_filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.884); /* Adjust the alpha (opacity) value */
+  filter: brightness(30%); /* Adjust the brightness value */
+  z-index: -1; /* Place the dimmed background behind other content */
+  pointer-events: none;
+}
+
+.display_none {
+  display: none;
+}
+
+.display_flex {
+  display: flex;
+}
+
+.display_block {
+  display: block;
+}
+
+div.abs {
+  background-color: rgba(121, 129, 130, 0.733);
+  position: absolute;
+  top: 40%;
+  border-radius: 80px;
+}
+div.abs img {
+  padding: 10px;
+}
+div.abs img:hover {
+  cursor: pointer;
+  background-color: rgba(101, 125, 129, 0.622);
+}
+
+div.abs_pos_right {
+  right: 0;
+}
+
+div.abs_pos_left {
+  left: 0;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m30 {
+  margin: 30px;
+}
+
+.w60 {
+  width: 70%;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.p30 {
+  padding: 20px;
+}
+
+.b10 {
+  font-weight: 500;
+}
+
+.b20 {
+  font-weight: 800;
+}
+
+.mphoto {
+  border-radius: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.271), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.orig_price {
+  text-decoration: line-through;
+  color: hsl(219, 9%, 45%);
+  font-weight: 500;
+}
+
+.spill {
+  padding: 4px;
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  border-radius: 11px;
+}
+
+.spill_carter {
+  background-color: hsl(223, 64%, 98%);
+}
+
+img {
+  border-radius: 11px;
+}
+
+div.main_div {
+  width: 100%;
+  margin: auto;
+}
+
+div.menu_line {
+  display: flex;
+  flex-direction: row;
+}
+div.menu_line div.menu_set1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 67%;
+}
+div.menu_line div.menu_set1 div.hoverable:hover {
+  text-decoration: underline;
+}
+div.menu_line div.menu_set2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 33%;
+}
+div.menu_line div.menu_set2 div {
+  margin: 15px;
+}
+
+div.second_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.second_div > div {
+  flex: 50%;
+}
+
+div.second_set {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.second_set2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.second_set2 img {
+  display: inline-block;
+  margin: 10px;
+  width: 75px;
+  height: 75px;
+}
+
+div.third_set {
+  font-family: "kregular";
+}
+div.third_set > div {
+  margin-bottom: 35px;
+}
+
+div.carter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.carter div.hoverable:hover {
+  background-color: hsl(26, 47%, 36%);
+}
+
+div.cartadd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(26, 100%, 55%);
+  width: 40%;
+  margin: auto;
+  border-radius: 11px;
+  margin-right: 140px;
+}
+div.cartadd .cartbutton {
+  padding: -30px;
+  margin-right: 60px;
+  color: hsl(60, 51%, 69%);
+  font-weight: bolder;
+}
+
+div.cartwindow {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 990;
+  width: 20%;
+  font-size: 14px;
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 11px;
+  transition: display 1s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+div.cartwindow > div {
+  margin: 10px;
+}
+div.cartwindow .aprice {
+  font-weight: bolder;
+}
+
+div.cartgrid {
+  font-family: "kregular";
+  display: grid;
+  grid-template-columns: auto auto auto;
+  place-items: left;
+  gap: 15px;
+}
+div.cartgrid div.cartgrid_1 {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+div.cartgrid div.cartgrid_2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+div.cartgrid div.cartgrid_3 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+div.cartgrid div.cartgrid_3 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+div.cartgrid div.cartgrid_5 {
+  grid-column: 3/4;
+  grid-row: 1/4;
+}
+
+div.modal_window {
+  z-index: 999;
+  position: fixed;
+  top: 20%;
+  right: 35%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.271), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hoverable:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=ecomPSF.css.map */
