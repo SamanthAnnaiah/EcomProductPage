@@ -7,6 +7,7 @@ let shopCart_right = 0;
 let nitems_num = 0;
 let cur_index = 0; 
 let product_images = "";
+let modal_count = 0; 
 
 let main_div = document.querySelector(".main_div");
 let tnailListener = document.querySelector(".second_set2");
@@ -26,7 +27,7 @@ let pimg = document.getElementById("pimg");
 let modal_window = document.querySelector(".modal_window");
 let nextone = document.getElementById("iconNext");
 let prevone = document.getElementById("iconPrevious");
-
+let modal_close = document.getElementById("modal_close"); 
 
 
 tnailListener.addEventListener("click", tnailsDisplayer);
@@ -37,6 +38,7 @@ cart_delete.addEventListener("click", cartDeleter);
 pimg.addEventListener("click", modaler);
 nextone.addEventListener("click", nextprev); 
 prevone.addEventListener("click", nextprev); 
+modal_close.addEventListener("click", modalCloser);
 
 getshopCart();
 loadImages();
@@ -197,20 +199,30 @@ function cartDeleter() {
 }
 
 function modaler(params) {
-    let second_set = document.querySelector(".second_set");
-    let modal_set = second_set.cloneNode(true); 
-    modal_set.addEventListener("click", mnailsDisplayer); 
-    modal_window.appendChild(modal_set);
+    modal_count++;
+    if (modal_count == 1) {
+        let second_set = document.querySelector(".second_set");
+        let modal_set = second_set.cloneNode(true); 
+        modal_set.addEventListener("click", mnailsDisplayer); 
+        modal_window.appendChild(modal_set);
+    } else {
+        let second_set = document.querySelector(".second_set");
+        let modal_second_set = document.querySelector("div.modal_window div.second_set");
+        modal_second_set.innerHTML = "";
+        modal_window.removeChild(modal_second_set);
+        modal_second_set = second_set.cloneNode(true); 
+        modal_second_set.addEventListener("click", mnailsDisplayer); 
+        modal_window.appendChild(modal_second_set);
+    }
     product_images = document.querySelector(".modal_window .second_set2").children;
     console.log(product_images);
     main_div.classList.add("reduce_filter"); 
     modal_window.classList.add("display_block");
-    second_set.disabled = true;
 }
 
 function nextprev(event) {
     if (event.target.id == "iconNext") {
-        if (product_images.length >= (cur_index + 1)) {
+        if (product_images.length > (cur_index + 1)) {
             cur_index++;
             knailsDisplayer(product_images[cur_index]);
         }
@@ -222,4 +234,9 @@ function nextprev(event) {
             knailsDisplayer(product_images[cur_index]);
         }
     }
+}
+
+function modalCloser() {
+    main_div.classList.remove("reduce_filter"); 
+    modal_window.classList.remove("display_block");
 }

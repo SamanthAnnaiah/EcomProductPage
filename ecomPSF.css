@@ -50,7 +50,7 @@ body {
   left: 0;
   width: 1440px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.884); /* Adjust the alpha (opacity) value */
+  background-color: rgba(0, 0, 0, 0.91); /* Adjust the alpha (opacity) value */
   filter: brightness(30%); /* Adjust the brightness value */
   z-index: -1; /* Place the dimmed background behind other content */
   pointer-events: none;
